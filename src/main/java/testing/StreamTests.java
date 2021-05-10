@@ -14,33 +14,33 @@ public class StreamTests {
     List<Animal> AnimalList;
 
     public StreamTests(){
-        // runThings();
-		// AnimalList = initAnimal();
+        runThings();
+		AnimalList = initAnimal();
        
 
     }
 
-    // private List<Animal> initAnimal(){
-    //     factory = new AnimalFactory();
-    //     List animl<Animal> = new ArrayList<Animal>();
-    //     for(int i=0; i < 5; i++){
-    //         animl.add(factory.createBeast());
-    //     }
-    //     return animl;
-    // }
+    private List<Animal> initAnimal(){
+        factory = new AnimalFactory();
+        List<Animal> animl = new ArrayList<Animal>();
+        for(int i=0; i < 5; i++){
+            animl.add(factory.createBeast());
+        }
+        return animl;
+    }
         
-    // private void runThings(){
+    private void runThings(){
 
-    //     Map<String, Map<String, Long>> animalTypecounts =
-    //         AnimalList.stream().collect(Collectors.groupingBy(
-    //             Animal::getType, TreeMap::new, Collectors.groupingBy(
-    //                 Animal::getName, TreeMap::new, Collectors.counting()
-    //             )
-    //         )
-    //     );
-    //     Stream.iterate(10, t -> t <= 30, (t) -> t + 10);
-    //     animalTypecounts.entrySet().forEach(System.out::println);
+        Map<String, Map<String, Long>> animalTypecounts =
+            AnimalList.stream().collect(Collectors.groupingBy(
+                Animal::getType, TreeMap::new, Collectors.groupingBy(
+                    Animal::getName, TreeMap::new, Collectors.counting()
+                )
+            )
+        );
+        Stream.iterate(10, t -> t <= 30, (t) -> t + 10);
+        animalTypecounts.entrySet().forEach(System.out::println);
 
-    // }
+    }
 
 }

@@ -4,7 +4,7 @@ import testing.*;
 
 public class Main{
 
-	static String testparse = "ueaue1236";
+	static String testparse = "aou1236";
 	static int yeetmode;
 
 
@@ -22,4 +22,4 @@ public class Main{
  
 
 }
-<
+

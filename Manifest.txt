@@ -1,4 +1,5 @@
 Manifest-Version: 1.0
 Created-By: Obit
-Main-Class: Main.java
+Class-Path: testing/ testing/instantiableObjects/
+Main-Class: Main
 
