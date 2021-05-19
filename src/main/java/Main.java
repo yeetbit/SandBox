@@ -1,10 +1,13 @@
 
-import testing.*;
+import testing.instantiableObjects.Animal;
+import testing.instantiableObjects.Cat;
 
 public class Main{
 
     public static void main (String[] args) {
 
+		// Animal jansen = new Cat("Jansen", 2, "Male");
+		// jansen.eat();
 		int n1 = 4;
 		int n3 = 4;
 		float f1 = n3;
@@ -16,6 +19,7 @@ public class Main{
 		System.out.println("You can up-cast automatically from int to float "+ f1);
 		System.out.println("You can down-cast from float to int "+ n3);
 		System.out.println("\nEven while they are the same width");
+
     }
 
 	public static long power(int num, int pow){

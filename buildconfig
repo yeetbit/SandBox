@@ -40,7 +40,7 @@ echo " "
 echo "-------------"
 echo " "
 
-javac -Xlint:unchecked -cp src/main/java/. src/main/java/Main.java src/main/java/testing/*.java src/main/java/testing/instantiableObjects/*.java -d target/classes
+javac -Xlint:unchecked -cp src/main/java/ src/main/java/Main.java src/main/java/testing/*.java src/main/java/testing/instantiableObjects/*.java -d target/classes
 
 echo " "
 echo "-------------"
