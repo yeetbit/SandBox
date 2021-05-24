@@ -1,24 +1,12 @@
-
-import testing.instantiableObjects.Animal;
-import testing.instantiableObjects.Cat;
+import sandbox.testing.instantiableObjects.*;
 
 public class Main{
 
     public static void main (String[] args) {
 
-		// Animal jansen = new Cat("Jansen", 2, "Male");
-		// jansen.eat();
-		int n1 = 4;
-		int n3 = 4;
-		float f1 = n3;
-		n3 = (int) f1;
-		boolean b1 = n1==n3;
+		Animal jansen = new Cat("Jansen", 2, "Male");
+		jansen.eat();
 
-        // new StreamTests();
-		// System.out.println(n1+" at the power of "+n2+" = "+exp);
-		System.out.println("You can up-cast automatically from int to float "+ f1);
-		System.out.println("You can down-cast from float to int "+ n3);
-		System.out.println("\nEven while they are the same width");
 
     }
 

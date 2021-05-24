@@ -1,5 +1,7 @@
 #!/bin/zsh
 rm -rf target
+rm -f dotjava
+rm -f dotclass
 # implement easy to use build tool/script 
 
 # type default: .class target/classes, .jar target/jars, bin target/bin
@@ -32,6 +34,8 @@ rm -rf target
 # The manifest file name and the archive file name needs to be specified
 # in the same order the 'm' and 'f' flags are specified.
 
+# java -cp target/classes/. Main		before I forget again, this runs plain classes 
+
 echo " "
 echo "start autobuild"
 echo " "
@@ -39,8 +43,10 @@ echo "compiling without verbose messaging..."
 echo " "
 echo "-------------"
 echo " "
+find -name "*.java" > dotjava
+javac -Xlint:unchecked @dotjava -d target/classes
 
-javac -Xlint:unchecked -cp src/main/java/ src/main/java/Main.java src/main/java/testing/*.java src/main/java/testing/instantiableObjects/*.java -d target/classes
+#javac -Xlint:unchecked -cp src/main/java/. src/main/java/Main.java src/main/java/sandbox/testing/*.java src/main/java/testing/instantiableObjects/*.java -d target/classes
 
 echo " "
 echo "-------------"
@@ -48,7 +54,8 @@ echo " "
 echo "if noerror during compilation, starting jar archive..."
 echo " "
 mkdir target/jars/
-jar -cfm target/jars/sandbox.jar Manifest.txt -C target/classes/ Main.class target/classes/testing/*.class target/classes/testing/instantiableObjects/*.class
+find -name "*.class"  | awk '{ print substr ($0, 3 ) }' > dotclass
+jar -cfm target/jars/sandbox.jar Manifest.txt -C target/classes/ . @dotclass
 echo " "
 echo "exit autobuild"
 echo " "
