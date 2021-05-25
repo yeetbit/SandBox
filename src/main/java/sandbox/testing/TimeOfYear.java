@@ -1,9 +1,9 @@
 package testing;
 
-import java.util.ArrayList;
-import java.util.List;
+public class TimeOfYear {
 
-public class timeOfYear {
+	public TimeOfYear(){
+
 
 
 
