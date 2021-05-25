@@ -4,9 +4,10 @@ public class Main{
 
     public static void main (String[] args) {
 
-		Animal jansen = new Cat("Jansen", 2, "Male");
-		jansen.eat();
+		if(args.length !=1 || args.length >1){
+			System.err.println("Usage: sandbox Time of year tool\n    sandbox -w 20 // weeknumber\n    sandbox -d 150 // daynumber\n    cheers");
 
+			
 
     }
 
