@@ -1,0 +1,11 @@
+target/classes/sandbox/testing/instantiableObjects/Cat.class
+target/classes/sandbox/testing/instantiableObjects/Animal.class
+target/classes/Main.class
+target/classes/testing/InterfaceExample.class
+target/classes/testing/AbstractTesting.class
+target/classes/testing/test.class
+target/classes/testing/instantiableObjects/PersonFactory.class
+target/classes/testing/instantiableObjects/AnimalFactory.class
+target/classes/testing/StreamTests.class
+target/classes/testing/BeanTest.class
+target/classes/testing/test$harry.class
