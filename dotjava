@@ -1,1 +1,3 @@
-sandbox.testing.instantiableObjects.*;
+./src/main/java/sandbox/testing/Constants.java
+./src/main/java/sandbox/testing/TimeOfYear.java
+./src/main/java/Main.java

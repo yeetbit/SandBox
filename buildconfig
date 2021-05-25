@@ -44,18 +44,18 @@ echo " "
 echo "-------------"
 echo " "
 find -name "*.java" > dotjava
-javac -Xlint:unchecked @dotjava -d target/classes
+javac -Xlint:all @dotjava -d target/classes
 
 #javac -Xlint:unchecked -cp src/main/java/. src/main/java/Main.java src/main/java/sandbox/testing/*.java src/main/java/testing/instantiableObjects/*.java -d target/classes
 
 echo " "
 echo "-------------"
 echo " "
-echo "if noerror during compilation, starting jar archive..."
-echo " "
-mkdir target/jars/
-find -name "*.class"  | awk '{ print substr ($0, 3 ) }' > dotclass
-jar -cfm target/jars/sandbox.jar Manifest.txt -C target/classes/ . @dotclass
+# echo "if noerror during compilation, starting jar archive..."
+# echo " "
+# mkdir target/jars/
+# find -name "*.class"  | awk '{ print substr ($0, 3 ) }' > dotclass
+# jar -cfm target/jars/sandbox.jar Manifest.txt -C target/classes/ . @dotclass
 echo " "
 echo "exit autobuild"
 echo " "
