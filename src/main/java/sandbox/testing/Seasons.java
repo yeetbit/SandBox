@@ -1,5 +1,5 @@
 package sandbox.testing; 
 
-enum constants{
+enum Seasons{
 	WINTER, SPRING, SUMMER, FALL
 }

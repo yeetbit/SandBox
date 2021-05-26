@@ -2,14 +2,10 @@ package sandbox.testing;
 
 public class TimeOfYear {
 
-	public String timeOfYear(String in){
+	public String timeOfYear(String in) throws NumberFormatException{
 		int useableIn = -1;
-		try{
-			useableIn = Integer.parseInt(in.trim());
+		useableIn = Integer.parseInt(in.trim().substring(1));
+		return String.valueOf(useableIn);
 					
-			return String.valueOf(useableIn);
-		}catch(Exception e){
-			return "bad input"+e;
-		}
 	}
 }
