@@ -51,11 +51,11 @@ javac -Xlint:all @dotjava -d target/classes
 echo " "
 echo "-------------"
 echo " "
-echo "if noerror during compilation, starting jar archive..."
-echo " "
-mkdir target/jars/
-find -name "*.class"  | awk '{ print substr ($0, 3 ) }' > dotclass
-jar -cfm target/jars/sandbox.jar Manifest.txt -C target/classes/ . @dotclass
+# echo "if noerror during compilation, starting jar archive..."
+# echo " "
+# mkdir target/jars/
+# find -name "*.class"  | awk '{ print substr ($0, 3 ) }' > dotclass
+# jar -cfm target/jars/sandbox.jar Manifest.txt -C @dotclass
 echo " "
 echo "exit autobuild"
 echo " "
