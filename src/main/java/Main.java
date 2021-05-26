@@ -6,7 +6,7 @@ public class Main{
 
 		if(args.length !=1 || args.length >1){
 			System.err.println("Usage: sandbox Time of yAear tool\n    sandbox -w 20      weeknumber\n    sandbox -d 150      daynumber\n");
-			System.out.println("")
+			System.out.println("");
 			System.exit(-1);
 		}else {
 			TimeOfYear toy = new TimeOfYear();
