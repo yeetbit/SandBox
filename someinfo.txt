@@ -1,0 +1,25 @@
+If you want to do the conversion to UEFI, make sure you backed-up everything. Including your files from the windows install.
+
+* Create a Bootable Manjaro USB
+
+* During bios startup select one of the two UEFI partitions to start the Manjaro USB from. ***Don't select the USB drive itself, this will set your boot mode in MBR*** 
+
+----------------------------------------------------
+**Then:** the easiest way would be fresh install. 
+@ the Manjaro installer, select manual partitioning. 
+
+* **EFI partition**: Select the /dev/sda1 boot partition > select mount point **/boot/efi** or **/efi**. **DO NOT SELECT FORMAT**
+In the lower part of the installer window it says something like, "here we going to install the grub bootloader"
+
+* **Manjaro root partition**: select the partition you already used for your previous install: /dev/sda4 select reformat filesystem ext4 > select mount point **/** (root).
+
+*  **swap**: select the partition you already used, /dev/sda3 select filesystem swap > mount point swap
+
+* continue installation normally
+------------------------------
+
+  
+
+**Alternatively:** You have the option to convert your linux install to uefi, but it can a be a bit tricky. And potentially could ruin your windows bootloader.
+
+[Convert **MBR** to **UEFI**](https://serverfault.com/questions/963178/how-do-i-convert-my-linux-disk-from-mbr-to-gpt-with-uefi)
