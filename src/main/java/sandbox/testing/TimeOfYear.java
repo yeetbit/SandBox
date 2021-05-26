@@ -1,4 +1,4 @@
-package testing;
+package sandbox.testing;
 
 public class TimeOfYear {
 
@@ -6,8 +6,8 @@ public class TimeOfYear {
 		int useableIn = -1;
 		try{
 			useableIn = Integer.parseInt(in.trim());
-			return new StringBuilder(useableIn);
 					
+			return String.valueOf(useableIn);
 		}catch(Exception e){
 			return "bad input"+e;
 		}

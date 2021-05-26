@@ -1,3 +1,3 @@
-protected enum constants{
+enum constants{
 	WINTER, SPRING, SUMMER, FALL
 }

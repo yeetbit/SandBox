@@ -1,12 +1,12 @@
-import sandbox.testing.instantiableObjects.*;
+import sandbox.testing.*;
 
 public class Main{
 
-    public static void main (String[] args) throws Error {
+    public static void main (String[] args) {
 
 		if(args.length !=1 || args.length >1){
-			System.err.println("Usage: sandbox Time of yAear tool\n    sandbox -w 20 // weeknumber\n    sandbox -d 150 // daynumber\n    cheers");
-			System.out.
+			System.err.println("Usage: sandbox Time of yAear tool\n    sandbox -w 20      weeknumber\n    sandbox -d 150      daynumber\n");
+			System.out.println("")
 			System.exit(-1);
 		}else {
 			TimeOfYear toy = new TimeOfYear();
