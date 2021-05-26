@@ -4,13 +4,18 @@ public class Main{
 
     public static void main (String[] args) {
 
-		if(args.length !=1 || args.length >1){
+		if(args.length !=1 || args.length >2){
 			badArgs("no or to many arguments ");
 		}else {
 			TimeOfYear toy = new TimeOfYear();
 			try{
-				String msg = toy.timeOfYear(args[0]);
-				System.out.println("The parsed number is: "+ msg);
+				if(args.length==2){
+					String msg = toy.timeOfYear(args[0], args[1]);
+					System.out.println(msg);
+				}else{
+					String msg = toy.timeOfYear(args[0]);
+					System.out.println(msg);
+				}			
 			}catch(Exception e){
 
 				badArgs(e);

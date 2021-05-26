@@ -44,7 +44,7 @@ echo " "
 echo "-------------"
 echo " "
 find -name "*.java" > dotjava
-javac -Xlint:all @dotjava -d target/classes
+javac -Xlint:all -Xdiags:verbose @dotjava -d target/classes
 
 #javac -Xlint:unchecked -cp src/main/java/. src/main/java/Main.java src/main/java/sandbox/testing/*.java src/main/java/testing/instantiableObjects/*.java -d target/classes
 
